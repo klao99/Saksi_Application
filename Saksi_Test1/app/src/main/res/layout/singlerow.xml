@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.makeramen.roundedimageview.RoundedImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/imgtatoo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:adjustViewBounds="true"
+    cardview:riv_corner_radius="20dp">
+</com.makeramen.roundedimageview.RoundedImageView>
+        
+<!--        <LinearLayout-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgtatoo"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@mipmap/ic_launcher"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/nameStore"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="storename"-->
+<!--                    android:textSize="15dp"-->
+<!--                    android:fontFamily="@font/mitr_regular"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:layout_below="@+id/imgtatoo"-->
+<!--                    />-->
+<!--        </LinearLayout>-->
+
+
+
+
+

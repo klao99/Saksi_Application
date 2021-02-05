@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "840610510124",
+    "firebase_url": "https://saksi-test1-3b712.firebaseio.com",
+    "project_id": "saksi-test1-3b712",
+    "storage_bucket": "saksi-test1-3b712.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840610510124:android:ec55e7185ec838d4bd6889",
+        "android_client_info": {
+          "package_name": "com.example.saksi_test1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840610510124-8mllph31cudasesrecv2oseh7qg0656c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmsn80xtnBiFxWWbzUI93nYaFFq5RX_NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840610510124-8mllph31cudasesrecv2oseh7qg0656c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
