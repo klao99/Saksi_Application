@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="หน้าหลัก"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/store"
+        android:title="ค้นหาร้าน"
+        android:icon="@drawable/ic_store"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="โปรไฟล์"
+        android:icon="@drawable/ic_person"/>
+
+</menu>
