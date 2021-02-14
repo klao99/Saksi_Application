@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestTattooActivity"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:id="@+id/rootView">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/addImgCustomer"
+            />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/tattooImgId"
+            android:layout_centerInParent="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/groupBtn"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/btnSize2X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2X"/>
+
+            <Button
+                android:id="@+id/btnSize5X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5X"/>
+
+            <Button
+                android:id="@+id/btnSize8X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8X"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:layout_below="@+id/rootView"
+        android:id="@+id/btnSave"/>
+
+    <Button
+        android:id="@+id/btnSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rootView"
+       />
+</RelativeLayout>

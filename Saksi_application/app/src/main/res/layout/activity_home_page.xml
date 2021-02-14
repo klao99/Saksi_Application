@@ -1,31 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".bottomNev.Home_page">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_below="@+id/text1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_marginTop="20dp"
+            android:layout_width="30dp"
+            android:layout_height="100dp"
+            android:src="@drawable/new_logo_black"
+            android:layout_centerHorizontal="true"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recView"
+        <ImageView
+            android:id="@+id/btnTesttat"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:background="@drawable/edit_round"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ทดลองลายสัก"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginLeft="25dp"
+            android:layout_alignLeft="@+id/btnTesttat"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cartoon"/>
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnTesttat"
+            android:text="ประเภทที่นิยม"
+            android:layout_marginLeft="30dp"
+            android:textColor="#000"
+            android:textSize="25dp"
+            android:layout_marginTop="40dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_below="@+id/text1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:id="@+id/bottom_navigation"-->
-<!--        app:itemBackground="@color/colorPrimary"-->
-<!--        app:itemTextColor="@drawable/selector"-->
-<!--        app:itemIconTint="@drawable/selector"-->
-<!--        app:menu="@menu/menu_navigation"-->
-<!--        android:layout_alignParentBottom="true"/>-->
 
-</LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

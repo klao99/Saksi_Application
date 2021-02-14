@@ -1,4 +1,4 @@
-package com.example.saksi_test1;
+package com.chutikarn.saksi_application;
 
 import android.graphics.Bitmap;
 

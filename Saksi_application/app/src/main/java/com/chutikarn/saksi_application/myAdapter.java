@@ -5,16 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentTransitionImpl;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.chutikarn.saksi_application.model.tattooImg;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.makeramen.roundedimageview.RoundedImageView;
+import com.chutikarn.saksi_application.model.tattooPic;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -22,8 +18,8 @@ import java.util.ArrayList;
 public class myAdapter extends RecyclerView.Adapter<myAdapter.myAdapterViewHoder>
 {
     public Context context;
-    public ArrayList<tattooImg> arrayList;
-    public myAdapter(Context context, ArrayList<tattooImg> arrayList)
+    public ArrayList<tattooPic> arrayList;
+    public myAdapter(Context context, ArrayList<tattooPic> arrayList)
     {
         this.context = context;
         this.arrayList = arrayList;
@@ -39,8 +35,9 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myAdapterViewHoder
 
     @Override
     public void onBindViewHolder( myAdapterViewHoder holder, int position) {
-        tattooImg picitem = arrayList.get(position);
-        Picasso.get().load(picitem.getImage()).into(holder.imgtattoo);
+        tattooPic picitem = arrayList.get(position);
+        holder.detailholder.setText(picitem.getDetail());
+        Picasso.get().load(picitem.getImageUrl()).into(holder.image_singlerow);
     }
 
     @Override
@@ -48,14 +45,20 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myAdapterViewHoder
         return arrayList.size();
     }
 
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
     public class myAdapterViewHoder extends RecyclerView.ViewHolder{
 
-        public RoundedImageView imgtattoo;
+        ImageView image_singlerow;
+        TextView detailholder;
 
         public myAdapterViewHoder(@NonNull View itemView) {
             super(itemView);
-
-            imgtattoo = (RoundedImageView)itemView.findViewById(R.id.imgtatoo);
+            image_singlerow = itemView.findViewById(R.id.image_singlerow);
+            detailholder = itemView.findViewById(R.id.detailholder);
 
         }
     }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "856158145366",
+    "project_id": "saksi-application",
+    "storage_bucket": "saksi-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856158145366:android:4e89cf4f327a0c6f7f24f7",
+        "android_client_info": {
+          "package_name": "com.chutikarn.saksi_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856158145366-65rsr1edc0q6oplm24mi761j0tndgc9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhOeDg3rtFZ7gSKetx27z7PG6LuIf9_xk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856158145366-65rsr1edc0q6oplm24mi761j0tndgc9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
