@@ -1,4 +1,4 @@
-package com.chutikarn.saksi_application;
+package com.chutikarn.saksi_application.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.chutikarn.saksi_application.R;
 import com.chutikarn.saksi_application.model.tattooPic;
 import com.squareup.picasso.Picasso;
 

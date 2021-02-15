@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import com.chutikarn.saksi_application.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class profile_page extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +27,12 @@ public class profile_page extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.home:
-                        startActivity(new Intent(getApplicationContext(), Home_page.class));
+                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 
                     case R.id.store:
-                        startActivity(new Intent(getApplicationContext(), Store_page.class));
+                        startActivity(new Intent(getApplicationContext(), StoreActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 

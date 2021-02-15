@@ -3,13 +3,17 @@ package com.chutikarn.saksi_application.model;
 public class tattooPic {
     private String detail;
     private String imageUrl;
-
-    public tattooPic(String detail, String imageUrl) {
-        this.detail = detail;
-        this.imageUrl = imageUrl;
-    }
+    private String id;
+    private String typeTattoo;
 
     public tattooPic() {
+    }
+
+    public tattooPic(String detail, String imageUrl, String id, String typeTattoo) {
+        this.detail = detail;
+        this.imageUrl = imageUrl;
+        this.id = id;
+        this.typeTattoo = typeTattoo;
     }
 
     public String getDetail() {
@@ -26,5 +30,21 @@ public class tattooPic {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTypeTattoo() {
+        return typeTattoo;
+    }
+
+    public void setTypeTattoo(String typeTattoo) {
+        this.typeTattoo = typeTattoo;
     }
 }

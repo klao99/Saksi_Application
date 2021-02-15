@@ -13,20 +13,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CategoryActivity"></activity>
-        <activity android:name=".StoreActivity" />
-        <activity android:name=".TestTattooActivity2" />
+        <activity android:name=".ResultStoreListActivity">
+
+
+        </activity>
+        <activity android:name=".CategoryListActivity"/>
+        <activity android:name=".StoreProfileActivity" />
+        <activity android:name=".ViewActivity2" />
         <activity android:name=".TestTattooActivity" />
         <activity android:name=".ViewActivity" />
-        <activity android:name=".bottomNev.Home_page">
+        <activity android:name=".bottomNev.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".bottomNev.profile_page" />
-        <activity android:name=".bottomNev.Store_page" />
+        <activity android:name=".ResultTattooListActivity" />
+        <activity android:name=".bottomNev.ProfileActivity" />
+        <activity android:name=".bottomNev.StoreActivity" />
         <activity android:name=".MainActivity" />
     </application>
 
