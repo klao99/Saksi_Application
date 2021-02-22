@@ -1,8 +1,5 @@
 package com.chutikarn.saksi_application;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,6 +16,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -27,7 +27,9 @@ import java.io.IOException;
 
 public class TestTattooActivity extends AppCompatActivity {
 
-    private ImageView addImgCustomer,tattooImgId;
+
+
+    private ImageView addImgCustomer,tattooImgId,stickerView;
     Button btnSave,btnSize2X,btnSize,btnSize5X;
     LinearLayout groupBtn;
 
@@ -42,10 +44,16 @@ public class TestTattooActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_tattoo);
 
+
         initViewData();
         initControl();
 
+
+
     }
+
+
+
 
     private void initViewData() {
         windowwidth = getWindowManager().getDefaultDisplay().getWidth();
@@ -108,6 +116,17 @@ public class TestTattooActivity extends AppCompatActivity {
             }
         });
 
+//        btnSize5X.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                    RelativeLayout.LayoutParams params = ( RelativeLayout.LayoutParams) tattooImgId.getLayoutParams();
+//                    params.width = tattooImgId.getLayoutParams().width / 2;
+//                    params.height = tattooImgId.getLayoutParams().width / 2;
+//                    tattooImgId.setLayoutParams(params);
+//            }
+//        });
+
         tattooImgId.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -137,6 +156,12 @@ public class TestTattooActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+//        Matrix matrix = new Matrix();
+//        tattooImgId.setScaleType(ImageView.ScaleType.MATRIX);   //required
+//        float pivotX = pivotX,pivotY = 0,angle = 0;
+//        matrix.postRotate((float) angle, pivotX, pivotY);
+//        tattooImgId.setImageMatrix(matrix);
     }
 
     public Bitmap takeScreenshot() {

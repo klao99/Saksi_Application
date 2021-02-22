@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#181818"
+    tools:context=".login.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/new_logo_white"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="สมัครสมาชิก"
+            android:fontFamily="@font/mitr_regular"
+            android:textColor="#fff"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="45dp"
+        android:fontFamily="@font/mitr_regular">
+
+        <EditText
+            android:id="@+id/nameUser"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="200dp"
+            android:fontFamily="@font/mitr_regular"
+            android:hint="ชื่อผู้ใช้"
+            android:inputType="text"
+            android:textSize="14dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edit_round"/>
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/nameUser"
+            android:hint="อีเมล"
+            android:fontFamily="@font/mitr_regular"
+            android:layout_marginTop="15dp"
+            android:inputType="textEmailAddress"
+            android:textSize="14dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edit_round"/>
+
+        <EditText
+            android:id="@+id/passcode"
+            android:layout_below="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/mitr_regular"
+            android:hint="รหัส"
+            android:inputType="textPassword"
+            android:textSize="14dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edit_round"/>
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/passcode"
+            android:hint="เบอร์โทร"
+            android:fontFamily="@font/mitr_regular"
+            android:layout_marginTop="15dp"
+            android:inputType="numberSigned"
+            android:textSize="14dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edit_round"/>
+
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/radiAdmin"-->
+<!--                android:layout_below="@+id/phoneNumber"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Admin"-->
+<!--                android:textColor="#fff" />-->
+<!--            <CheckBox-->
+<!--                android:id="@+id/radiUser"-->
+<!--                android:layout_below="@+id/phoneNumber"-->
+<!--                android:layout_toRightOf="@+id/radiAdmin"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="User"-->
+<!--                android:textColor="#fff"/>-->
+
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_below="@id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_round_y"
+            android:fontFamily="@font/mitr_regular"
+            android:text="ไปหน้าLog in"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_below="@id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_round_y"
+            android:fontFamily="@font/mitr_regular"
+            android:text="สร้างAccount"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

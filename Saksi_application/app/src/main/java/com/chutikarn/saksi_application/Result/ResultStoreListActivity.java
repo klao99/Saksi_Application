@@ -1,28 +1,23 @@
-package com.chutikarn.saksi_application;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.chutikarn.saksi_application.Result;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.chutikarn.saksi_application.firebase.FirebaseManager;
-import com.chutikarn.saksi_application.model.Category;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.chutikarn.saksi_application.R;
+import com.chutikarn.saksi_application.Store.StoreProfileActivity;
 import com.chutikarn.saksi_application.model.Stores;
-import com.chutikarn.saksi_application.viewHolder.CategoryViewHolder;
 import com.chutikarn.saksi_application.viewHolder.ResultStoreViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.squareup.picasso.Callback;
@@ -34,8 +29,12 @@ public class ResultStoreListActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     Query databaseReference;
+    String Cat_id;
     FirebaseRecyclerOptions<Stores> options;
     FirebaseRecyclerAdapter<Stores, ResultStoreViewHolder> adapter;
+
+    TextView textType;
+    String textTattooType;
 
 
 
@@ -44,13 +43,24 @@ public class ResultStoreListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_store_list);
 
+        Intent intent = getIntent();
+        textTattooType= intent.getStringExtra("catId");
 
-        // StoreList
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Stores");
+        textType = findViewById(R.id.textType);
+        textType.setText("" + textTattooType);
+        //
+
+
+
+        if (getIntent() != null)
+            Cat_id = getIntent().getStringExtra("catId");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Stores").orderByChild("type").equalTo(Cat_id);
         options = new FirebaseRecyclerOptions.Builder<Stores>().setQuery(databaseReference, Stores.class).build();
 
         recyclerView = (RecyclerView) findViewById(R.id.store_list);
         recyclerView.setHasFixedSize(true);
+
+        if (!Cat_id.isEmpty() && Cat_id!= null) {
 
         adapter = new FirebaseRecyclerAdapter<Stores, ResultStoreViewHolder>(options) {
             @Override
@@ -66,6 +76,7 @@ public class ResultStoreListActivity extends AppCompatActivity {
                        intent.putExtra("storeLocation", model.getLocation());
                        intent.putExtra("storeName", model.getStoreName());
                        intent.putExtra("storeDetail", model.getStoreDetail());
+
                         startActivity(intent);
                     }
                 });
@@ -93,6 +104,8 @@ public class ResultStoreListActivity extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(), 1);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
+
+        }
     }
 
     @Override

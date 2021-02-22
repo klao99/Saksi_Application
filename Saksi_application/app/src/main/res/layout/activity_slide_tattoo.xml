@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".slide.SlideTattooActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mSlideView"
+        android:layout_width="match_parent"
+        android:layout_height="680dp">
+    </androidx.viewpager.widget.ViewPager>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="ต่อไป"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/button_round_b"/>
+
+    <TextView
+        android:id="@+id/btnPassIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:textColor="#F9A826"
+        android:text="ข้ามขั้นตอนแนะนำ"/>
+
+    <LinearLayout
+        android:id="@+id/mDotLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:animationCache="true"
+        android:animateLayoutChanges="true"
+        android:alwaysDrawnWithCache="true"/>
+
+</RelativeLayout>

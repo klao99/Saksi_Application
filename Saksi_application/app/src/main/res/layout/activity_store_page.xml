@@ -6,8 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".bottomNev.StoreActivity">
 
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เลือกประเภทลายที่สนใจ"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_margin="20dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/catStore_list"
+        android:layout_below="@+id/head"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="25dp"

@@ -13,7 +13,7 @@
         android:layout_height="70dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
-        android:src="@drawable/ic_camera"
+        android:src="@drawable/profil_inception"
         />
 
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:textColor="#000"
         android:textSize="20dp"
-        android:text="Store name"
+        android:text="INCEPTION"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="35dp" />
 

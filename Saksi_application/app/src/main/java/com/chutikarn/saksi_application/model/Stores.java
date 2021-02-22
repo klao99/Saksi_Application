@@ -6,20 +6,11 @@ public class Stores {
     public String storeName;
     public String banner;
     public String profile;
-    public String type;
+    //public ArrayList<String> type;
     public String storeDetail;
+    public String type;
 
     public Stores() {
-    }
-
-    public Stores(String id, String location, String storeName, String banner, String profile, String type, String storeDetail) {
-        this.id = id;
-        this.location = location;
-        this.storeName = storeName;
-        this.banner = banner;
-        this.profile = profile;
-        this.type = type;
-        this.storeDetail = storeDetail;
     }
 
     public String getId() {
@@ -62,6 +53,14 @@ public class Stores {
         this.profile = profile;
     }
 
+    public String getStoreDetail() {
+        return storeDetail;
+    }
+
+    public void setStoreDetail(String storeDetail) {
+        this.storeDetail = storeDetail;
+    }
+
     public String getType() {
         return type;
     }
@@ -70,11 +69,13 @@ public class Stores {
         this.type = type;
     }
 
-    public String getStoreDetail() {
-        return storeDetail;
-    }
-
-    public void setStoreDetail(String storeDetail) {
+    public Stores(String id, String location, String storeName, String banner, String profile, String storeDetail, String type) {
+        this.id = id;
+        this.location = location;
+        this.storeName = storeName;
+        this.banner = banner;
+        this.profile = profile;
         this.storeDetail = storeDetail;
+        this.type = type;
     }
 }

@@ -1,10 +1,5 @@
 package com.chutikarn.saksi_application.bottomNev;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,11 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.chutikarn.saksi_application.CategoryListActivity;
-import com.chutikarn.saksi_application.viewHolder.MyViewHolder;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
 import com.chutikarn.saksi_application.R;
 import com.chutikarn.saksi_application.ViewActivity;
 import com.chutikarn.saksi_application.model.tattooPic;
+import com.chutikarn.saksi_application.slide.SlideStoreActivity;
+import com.chutikarn.saksi_application.slide.SlideTattooActivity;
+import com.chutikarn.saksi_application.viewHolder.MyViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -72,7 +73,7 @@ public class HomeActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.store:
-                        startActivity(new Intent(getApplicationContext(), StoreActivity.class));
+                        startActivity(new Intent(getApplicationContext(), SlideStoreActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
 
@@ -122,7 +123,7 @@ public class HomeActivity extends AppCompatActivity {
         btnTesttat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this, CategoryListActivity.class);
+                Intent intent=new Intent(HomeActivity.this, SlideTattooActivity.class);
                 startActivity(intent);
             }
         });

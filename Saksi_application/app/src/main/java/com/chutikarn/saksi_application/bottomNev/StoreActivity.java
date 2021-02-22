@@ -1,10 +1,5 @@
 package com.chutikarn.saksi_application.bottomNev;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,13 +7,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chutikarn.saksi_application.CategoryListActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.chutikarn.saksi_application.R;
-import com.chutikarn.saksi_application.ResultTattooListActivity;
+import com.chutikarn.saksi_application.Result.ResultStoreListActivity;
 import com.chutikarn.saksi_application.firebase.FirebaseManager;
 import com.chutikarn.saksi_application.model.Category;
-import com.chutikarn.saksi_application.viewHolder.CategoryStoreListActivity;
-import com.chutikarn.saksi_application.viewHolder.CategoryViewHolder;
+import com.chutikarn.saksi_application.CategoryStoreListActivity;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -33,7 +31,6 @@ public class StoreActivity extends AppCompatActivity {
     FirebaseRecyclerOptions<Category> options;
     FirebaseRecyclerAdapter<Category, CategoryStoreListActivity> adapter;
     private FirebaseManager firebaseManager;
-    String typeTattoo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +52,8 @@ public class StoreActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.store:
+                        startActivity(new Intent(getApplicationContext(), ResultStoreListActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
 
                     case R.id.profile:
@@ -68,7 +67,7 @@ public class StoreActivity extends AppCompatActivity {
 
         // CategoryList
 
-       // typeTattoo = getIntent().getStringExtra("typeTattoo");
+        String type = getIntent().getStringExtra("type");
         databaseReference = FirebaseDatabase.getInstance().getReference().child("category");
         options = new FirebaseRecyclerOptions.Builder<Category>().setQuery(databaseReference, Category.class).build();
 
@@ -79,15 +78,15 @@ public class StoreActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(CategoryStoreListActivity holder, int position, final Category model) {
                 holder.catName.setText(model.getCatTitle());
-                //holder.idCat.setText(model.getCatId());
-//                holder.itemView.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        Intent intent=new Intent(StoreActivity.this, ResultTattooListActivity.class);
-//                        intent.putExtra("catId", model.getCatTitle());
-//                        startActivity(intent);
-//                    }
-//                });
+//                holder.idCat.setText(model.getCatId());
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent=new Intent(StoreActivity.this, ResultStoreListActivity.class);
+                        intent.putExtra("catId", model.getCatTitle());
+                        startActivity(intent);
+                    }
+                });
 
                 Picasso.get().load(model.getCatIcon()).into(holder.catImage, new Callback() {
                     @Override

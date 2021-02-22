@@ -3,7 +3,6 @@ package com.chutikarn.saksi_application.viewHolder;
 
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +18,7 @@ public class ResultTattooViewHolder extends RecyclerView.ViewHolder  {
         super(itemView);
 
         roomImage=(ImageView)itemView.findViewById(R.id.room_image);
+
 
     }
 

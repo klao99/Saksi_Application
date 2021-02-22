@@ -6,6 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".bottomNev.ProfileActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:id="@+id/headProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="โปรไฟล์ของฉัน"
+            android:fontFamily="@font/fc_friday_medium"
+            android:textSize="25dp"
+            android:textColor="#293038"/>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imgPro"
+            android:layout_below="@+id/headProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/textNameProfile"
+            android:layout_below="@+id/imgPro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/fc_friday_medium"
+            android:textColor="#000"
+            android:text="UserName"
+            android:textSize="25dp"/>
+
+        <RelativeLayout
+            android:id="@+id/box1"
+            android:layout_below="@+id/textNameProfile"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/btnNoti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/mitr_regular"
+                android:textColor="#293038"
+                android:textSize="14dp"
+                android:text="แจ้งเตือน"/>
+
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_below="@+id/btnNoti"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"
+                android:background="#E5E5E5"/>
+            <TextView
+                android:id="@+id/btnSetting"
+                android:layout_below="@+id/btnNoti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/mitr_regular"
+                android:textColor="#293038"
+                android:textSize="14dp"
+                android:text="ตั้งค่า"/>
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_below="@+id/btnSetting"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"
+                android:background="#E5E5E5"/>
+
+            <TextView
+                android:id="@+id/btnLogout"
+                android:layout_below="@+id/btnSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/mitr_regular"
+                android:textColor="#293038"
+                android:textSize="14dp"
+                android:text="ออกจากระบบ"/>
+
+        </RelativeLayout>
+
+
+<!--        <Button-->
+<!--            android:id="@+id/btnLogout"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp"-->
+<!--            android:background="@drawable/button_round_y"-->
+<!--            android:text="ออกจากระบบ"/>-->
+
+
+    </RelativeLayout>
+
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

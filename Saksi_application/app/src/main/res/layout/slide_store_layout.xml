@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgSlide"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/slide_tattoo_1"
+        />
+    <TextView
+        android:id="@+id/headSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="เลือกประเภทลายสัก"
+        android:fontFamily="@font/fc_friday_medium"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/imgSlide"/>
+
+    <TextView
+        android:id="@+id/textSlide"
+        android:layout_below="@+id/headSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:textColor="#293038"
+        android:text="ตามหาลายที่ใช้ด้วยการเลือกประเภทลายที่ชอบ"/>
+
+</RelativeLayout>

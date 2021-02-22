@@ -4,53 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StoreProfileActivity">
+    tools:context=".Store.StoreProfileActivity">
     
     <ImageView
         android:id="@+id/banner"
         android:layout_width="match_parent"
-        android:layout_height="250dp"/>
+        android:scaleType="centerCrop"
+        android:layout_height="150dp"/>
 
-    <com.mikhaellopez.circularimageview.CircularImageView
-        android:id="@+id/imgPro"
+    <RelativeLayout
+        android:id="@+id/box1"
         android:layout_below="@+id/banner"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/ic_camera"
-        />
-    <TextView
-        android:id="@+id/txt"
+        android:layout_margin="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imgPro"
-        android:layout_marginLeft="20dp"
-        android:text="รานละเอียด"
-        android:textSize="15dp"/>
+        android:layout_height="wrap_content">
 
-    <Button
-        android:layout_below="@+id/txt"
-        android:id="@+id/btnRequest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ส่งคำขอ"/>
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imgPro"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher_round"
+            />
 
-    <Button
-        android:id="@+id/btnReview"
-        android:layout_below="@+id/txt"
-        android:layout_toRightOf="@+id/btnRequest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ส่งคำขอ"/>
+        <TextView
+            android:id="@+id/nameStore"
+            android:layout_toRightOf="@+id/imgPro"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:fontFamily="@font/fc_friday_medium"
+            android:layout_marginLeft="15dp"
+            android:textSize="23dp"
+            android:text="NameStore"
+            />
+        <TextView
+            android:id="@+id/reView"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/location"
+            android:layout_below="@+id/nameStore"
+            android:layout_toRightOf="@+id/imgPro"
+            android:layout_marginLeft="15dp"
+            android:text="ตำแหน่งที่ตั้ง"
+            android:textSize="15dp"
+            android:textColor="#C4C4C4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/headDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="รายละเอียด"
+            android:textColor="#000"
+            android:layout_below="@+id/imgPro"/>
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headDetail"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="รายละเอียด"
+            android:textSize="10dp"
+            android:textStyle="normal"
+            android:textAlignment="textStart"/>
+
+        //////////////////////
+
+            <Button
+                android:id="@+id/btnRequest"
+                android:layout_below="@+id/txt"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+               android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="normal"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_round_b"
+                android:textColor="#fff"
+                android:textSize="10dp"
+                android:text="ส่งคำขอ"/>
+
+    </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_below="@+id/btnRequest"
+        android:layout_below="@+id/box1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recView"
+            android:id="@+id/recViewtattoo"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

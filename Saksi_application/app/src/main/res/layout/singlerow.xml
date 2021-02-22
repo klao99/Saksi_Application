@@ -8,7 +8,9 @@
     android:layout_margin="10dp"
     android:adjustViewBounds="true"
     app:riv_corner_radius="12dp"
-    android:layout_marginBottom="20dp">
+    android:layout_marginBottom="20dp"
+    android:background="#fff"
+    android:padding="10dp">
 
 
     

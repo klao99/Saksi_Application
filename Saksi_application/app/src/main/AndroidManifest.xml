@@ -13,12 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultStoreListActivity">
-
-
-        </activity>
-        <activity android:name=".CategoryListActivity"/>
-        <activity android:name=".StoreProfileActivity" />
+        <activity android:name=".slide.SlideStoreActivity"></activity>
+        <activity android:name=".slide.SlideTattooActivity" />
+        <activity android:name=".RequestActivity" />
+        <activity android:name=".Store.StoreProfileActivity2" /> <!-- <activity android:name=".login.RegisterActivity"> -->
+        <activity android:name=".LoginRegis.LoginActivity2" />
+        <activity android:name=".LoginRegis.UserRegisterActivity2" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".Result.ResultStoreListActivity" />
+        <activity android:name=".CategoryListActivity" />
+        <activity android:name=".Store.StoreProfileActivity" />
         <activity android:name=".ViewActivity2" />
         <activity android:name=".TestTattooActivity" />
         <activity android:name=".ViewActivity" />
@@ -29,7 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResultTattooListActivity" />
+        <activity android:name=".Result.ResultTattooListActivity" />
         <activity android:name=".bottomNev.ProfileActivity" />
         <activity android:name=".bottomNev.StoreActivity" />
         <activity android:name=".MainActivity" />

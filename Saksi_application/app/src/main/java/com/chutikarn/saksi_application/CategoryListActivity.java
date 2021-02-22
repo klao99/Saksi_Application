@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.chutikarn.saksi_application.Result.ResultTattooListActivity;
 import com.chutikarn.saksi_application.firebase.FirebaseManager;
 import com.chutikarn.saksi_application.model.Category;
 import com.chutikarn.saksi_application.viewHolder.CategoryViewHolder;
@@ -58,6 +59,7 @@ public class CategoryListActivity extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent=new Intent(CategoryListActivity.this, ResultTattooListActivity.class);
                             intent.putExtra("catId", model.getCatTitle());
+                            intent.putExtra("catTitle", model.getCatTitle());
                             startActivity(intent);
                         }
                     });

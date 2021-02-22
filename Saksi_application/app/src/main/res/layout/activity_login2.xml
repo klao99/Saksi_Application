@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181818"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/new_logo_white"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="เข้าสู่ระบบ"
+            android:fontFamily="@font/mitr_regular"
+            android:textColor="#fff"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="45dp"
+        android:fontFamily="@font/mitr_regular">
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="200dp"
+            android:fontFamily="@font/mitr_regular"
+            android:hint="อีเมล"
+            android:inputType="text"
+            android:textSize="14dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edit_round"/>
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/input_email"
+            android:hint="รหัสผ่าน"
+            android:fontFamily="@font/mitr_regular"
+            android:layout_marginTop="15dp"
+            android:inputType="textPassword"
+            android:textSize="14dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edit_round"/>
+        <TextView
+            android:id="@+id/txtRegis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_password"
+            android:layout_marginLeft="133dp"
+            android:text="ยังไม่มีบัญชีใช่หรือไม่"
+            android:textColor="#fff"
+            android:textSize="10dp"
+            android:fontFamily="@font/mitr_regular"
+            android:layout_marginTop="17dp"/>
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:layout_below="@+id/input_password"
+            android:background="#181818"
+            android:text="สมัครสมาชิกกัน"
+            android:textColor="#F7C600"
+            android:textSize="10dp"
+            android:fontFamily="@font/mitr_regular"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/button_round_y"
+            android:fontFamily="@font/mitr_regular"
+            android:text="เข้าสู่ระบบ"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_login"
+            android:layout_marginTop="25dp"
+            android:text="หรือ"
+            android:fontFamily="@font/mitr_regular"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            />
+
+        <Button
+            android:id="@+id/btn_regisStore"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="550dp"
+            android:background="@drawable/button_round"
+            android:fontFamily="@font/mitr_regular"
+            android:text="เข้าร่วมเป็นสตูดิโอ หรือ ช่างสัก"
+            android:textSize="14dp"
+            android:textColor="#F7C600" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+
+
+<!--    <LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginLeft="25dp"-->
+<!--    android:layout_marginRight="25dp"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ลงชื่อเข้าสู่ระบบ"-->
+<!--        android:textSize="30dp"-->
+<!--        android:layout_gravity="center">-->
+<!--    </TextView>-->
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/input_email"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="อีเมล"-->
+<!--        android:padding="15dp"-->
+<!--        android:textColor="#000"-->
+<!--        android:textSize="20dp" />-->
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/input_password"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="รหัสผ่าน"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:padding="15dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textColor="#000"/>-->
+
+<!--</LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginLeft="25dp"-->
+<!--        android:layout_marginRight="25dp">-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progressBar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:visibility="gone" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_login"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="20dp"-->
+<!--            android:text="เข้าสุ่ระบบ" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_signup"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textColor="#000"-->
+<!--            android:background="@null"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:text="ยังไม่มีบัญชีใช้งาน ? สมัครเลย" />-->
+
+<!--    </LinearLayout>-->
+</RelativeLayout>

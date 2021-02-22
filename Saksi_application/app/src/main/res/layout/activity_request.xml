@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context=".RequestActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ตำแหน่งที่ต้องการสัก"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:fontFamily="@font/mitr_regular"
+        android:hint="อีเมล"
+        android:inputType="text"
+        android:textSize="14dp"
+        android:background="@drawable/edit_round"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ขนาด"
+        android:textColor="#000" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5x5"
+            android:padding="8dp"
+            android:layout_margin="8dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5x10"
+            android:padding="8dp"
+            android:layout_margin="8dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20x15"
+            android:padding="8dp"
+            android:layout_margin="8dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="สีที่ต้องการ"
+        android:textColor="#000" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="สี"
+            android:padding="8dp"
+            android:layout_margin="8dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ขาว-ดำ"
+            android:padding="8dp"
+            android:layout_margin="8dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="รายละเอียด"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/de"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:fontFamily="@font/mitr_regular"
+        android:hint="รายละเอียด"
+        android:inputType="text"
+        android:textSize="14dp"
+        android:background="@drawable/edit_round"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="วันเวลาที่ต้องการ"
+        android:textColor="#000" />
+    <EditText
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:fontFamily="@font/mitr_regular"
+        android:hint="รายละเอียด"
+        android:inputType="text"
+        android:textSize="14dp"
+        android:background="@drawable/edit_round"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="รูปที่ต้องการให้สัก"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:fontFamily="@font/mitr_regular"
+        android:hint="รายละเอียด"
+        android:inputType="text"
+        android:textSize="14dp"
+        android:background="@drawable/edit_round"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/button_round_y"
+        android:fontFamily="@font/mitr_regular"
+        android:text="ส่งคำร้อง"
+        android:textSize="14dp" />
+
+
+</LinearLayout>

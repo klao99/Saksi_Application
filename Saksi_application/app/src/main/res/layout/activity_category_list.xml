@@ -5,6 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เลือกประเภทลายที่สนใจ"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_margin="20dp"/>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/room_list"
                 android:layout_width="match_parent"

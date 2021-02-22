@@ -1,4 +1,4 @@
-package com.chutikarn.saksi_application.viewHolder;
+package com.chutikarn.saksi_application;
 
 import android.view.View;
 import android.widget.ImageView;

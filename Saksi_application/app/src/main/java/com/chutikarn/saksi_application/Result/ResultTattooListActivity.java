@@ -1,11 +1,10 @@
-package com.chutikarn.saksi_application;
+package com.chutikarn.saksi_application.Result;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.chutikarn.saksi_application.R;
+import com.chutikarn.saksi_application.ViewActivity2;
 import com.chutikarn.saksi_application.model.tattooPic;
 import com.chutikarn.saksi_application.viewHolder.ResultTattooViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -38,12 +39,26 @@ public class ResultTattooListActivity extends AppCompatActivity {
     FirebaseRecyclerOptions<tattooPic> options;
     FirebaseRecyclerAdapter<tattooPic, ResultTattooViewHolder> adapter;
 
+    String catTitle;
+    TextView textType;
+    String textTattooType;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_tattoo_list);
 
- // RoomList
+        Intent intent = getIntent();
+        textTattooType= intent.getStringExtra("catTitle");
+
+        textType = findViewById(R.id.textType);
+        textType.setText("" + textTattooType);
+
+
+
+        // RoomList
 
         if (getIntent() != null)
 
@@ -59,7 +74,7 @@ public class ResultTattooListActivity extends AppCompatActivity {
             adapter = new FirebaseRecyclerAdapter<tattooPic, ResultTattooViewHolder>(options) {
                 @Override
                 protected void onBindViewHolder(ResultTattooViewHolder holder, int position, final tattooPic model) {
-
+                    //holder.textType.setText(model.getTypeTattoo());
                     holder.itemView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -67,6 +82,7 @@ public class ResultTattooListActivity extends AppCompatActivity {
                             Intent intent = new Intent(ResultTattooListActivity.this, ViewActivity2.class);
                             intent.putExtra("imageUrl",model.getImageUrl());
                             intent.putExtra("detail",model.getDetail());
+
                              startActivity(intent);
                         }
                     });
