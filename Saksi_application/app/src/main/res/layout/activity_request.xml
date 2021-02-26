@@ -1,138 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
     android:orientation="vertical"
-    tools:context=".RequestActivity">
+    tools:context=".request.RequestActivity">
 
-    <TextView
+<!--    <TextView-->
+<!--        android:id="@+id/head"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginTop="-20dp"-->
+<!--        android:paddingTop="20dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:fontFamily="@font/fc_friday_medium"-->
+<!--        android:text="ส่งคำขอสัก"-->
+<!--        android:textColor="#fff"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="20dp"-->
+<!--        android:background="@drawable/button_round_b"/>-->
+
+    <RelativeLayout
+        android:layout_below="@+id/head"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ตำแหน่งที่ต้องการสัก"
-        android:textColor="#000" />
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:fontFamily="@font/mitr_regular"
-        android:hint="อีเมล"
-        android:inputType="text"
-        android:textSize="14dp"
-        android:background="@drawable/edit_round"/>
+        <TextView
+            android:id="@+id/headPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ตำแหน่งที่ต้องการสัก"
+            android:fontFamily="@font/fc_friday_medium"
+            android:textSize="18dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#000" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ขนาด"
-        android:textColor="#000" />
+        <EditText
+            android:id="@+id/position"
+            android:layout_below="@+id/headPosition"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/mitr_regular"
+            android:hint="โปรดระบุตำแหน่งที่ต้องการ"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            android:textSize="14dp"
+            android:background="@drawable/edit_round"/>
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <RadioButton
+        <TextView
+            android:id="@+id/idStore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5x5"
-            android:padding="8dp"
-            android:layout_margin="8dp"/>
-        <RadioButton
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            android:text="id store"/>
+
+        <TextView
+            android:id="@+id/idUser"
+            android:layout_below="@+id/idStore"
+            android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5x10"
-            android:padding="8dp"
-            android:layout_margin="8dp"/>
-        <RadioButton
+            android:visibility="invisible"
+            android:text="id user"/>
+
+        <TextView
+            android:id="@+id/headSize"
+            android:layout_below="@+id/position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fc_friday_medium"
+            android:textSize="18dp"
+            android:text="ขนาด"
+            android:textColor="#000" />
+
+        <RadioGroup
+            android:id="@+id/selectSize"
+            android:layout_below="@+id/headSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20x15"
-            android:padding="8dp"
-            android:layout_margin="8dp"/>
-    </RadioGroup>
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/size1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5x5"
+                android:padding="8dp"
+                android:layout_margin="8dp"/>
+            <RadioButton
+                android:id="@+id/size2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5x10"
+                android:padding="8dp"
+                android:layout_margin="8dp"/>
+            <RadioButton
+                android:id="@+id/size3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20x15"
+                android:padding="8dp"
+                android:layout_margin="8dp"/>
+        </RadioGroup>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="สีที่ต้องการ"
-        android:textColor="#000" />
+        <TextView
+            android:id="@+id/headColor"
+            android:layout_below="@+id/selectSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fc_friday_medium"
+            android:textSize="18dp"
+            android:text="สีที่ต้องการ"
+            android:textColor="#000" />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <RadioButton
+        <RadioGroup
+            android:id="@+id/selectColor"
+            android:layout_below="@id/headColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="สี"
-            android:padding="8dp"
-            android:layout_margin="8dp"/>
-        <RadioButton
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/colorful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="สี"
+                android:padding="8dp"
+                android:layout_margin="8dp"/>
+            <RadioButton
+                android:id="@+id/blackWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ขาว-ดำ"
+                android:padding="8dp"
+                android:layout_margin="8dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/headDetail"
+            android:layout_below="@+id/selectColor"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ขาว-ดำ"
-            android:padding="8dp"
-            android:layout_margin="8dp"/>
-    </RadioGroup>
+            android:fontFamily="@font/fc_friday_medium"
+            android:textSize="18dp"
+            android:layout_marginBottom="10dp"
+            android:text="รายละเอียด"
+            android:textColor="#000" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="รายละเอียด"
-        android:textColor="#000" />
+        <EditText
+            android:id="@+id/detail"
+            android:layout_below="@+id/headDetail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/mitr_regular"
+            android:hint="รายละเอียด"
+            android:paddingLeft="20dp"
+            android:inputType="text"
+            android:textSize="14dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_round"/>
 
-    <EditText
-        android:id="@+id/de"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:fontFamily="@font/mitr_regular"
-        android:hint="รายละเอียด"
-        android:inputType="text"
-        android:textSize="14dp"
-        android:background="@drawable/edit_round"/>
+        <TextView
+            android:id="@+id/headDate"
+            android:layout_below="@+id/detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fc_friday_medium"
+            android:textSize="18dp"
+            android:layout_marginBottom="10dp"
+            android:text="วันเวลาที่ต้องการ"
+            android:textColor="#000" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="วันเวลาที่ต้องการ"
-        android:textColor="#000" />
-    <EditText
-        android:id="@+id/detail"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:fontFamily="@font/mitr_regular"
-        android:hint="รายละเอียด"
-        android:inputType="text"
-        android:textSize="14dp"
-        android:background="@drawable/edit_round"/>
+        <EditText
+            android:id="@+id/selectDate"
+            android:layout_below="@+id/headDate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/mitr_regular"
+            android:paddingLeft="20dp"
+            android:hint="00/01/2021"
+            android:textSize="14dp"
+            android:drawableRight="@drawable/ic_calendar_icon"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_round"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="รูปที่ต้องการให้สัก"
-        android:textColor="#000" />
-
-    <EditText
-        android:id="@+id/date"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:fontFamily="@font/mitr_regular"
-        android:hint="รายละเอียด"
-        android:inputType="text"
-        android:textSize="14dp"
-        android:background="@drawable/edit_round"/>
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/button_round_y"
-        android:fontFamily="@font/mitr_regular"
-        android:text="ส่งคำร้อง"
-        android:textSize="14dp" />
+        <TextView
+            android:id="@+id/headImgTattoo"
+            android:layout_below="@+id/selectDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fc_friday_medium"
+            android:textSize="18dp"
+            android:layout_marginBottom="10dp"
+            android:text="รูปที่ต้องการให้สัก"
+            android:textColor="#000" />
 
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/selectImgTattoo"
+            android:layout_below="@+id/headImgTattoo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fontFamily="@font/mitr_regular"
+            android:text="date time"
+            android:textColor="#000"
+            android:inputType="text"
+            android:textSize="14dp"
+            android:background="@drawable/edit_round"/>
+
+        <Button
+            android:id="@+id/btnSentRequest"
+            android:layout_below="@+id/selectImgTattoo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_round_y"
+            android:fontFamily="@font/mitr_regular"
+            android:text="ส่งคำร้อง"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

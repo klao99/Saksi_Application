@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.chutikarn.saksi_application.login.LoginActivity;
+import com.chutikarn.saksi_application.loginRegis.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class UserProfileActivity extends AppCompatActivity {

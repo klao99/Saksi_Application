@@ -1,4 +1,4 @@
-package com.chutikarn.saksi_application.LoginRegis;
+package com.chutikarn.saksi_application.loginRegis;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,11 +21,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-//import android.support.annotation.NonNull;
-//import android.support.annotation.Nullable;
 
-
-public class UserRegisterActivity2 extends AppCompatActivity {
+public class RegisterUserActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword,inputName,inputNumber;
     private Button btnSignUp, btnResetPassword;
@@ -57,7 +54,7 @@ public class UserRegisterActivity2 extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login = new Intent(UserRegisterActivity2.this, LoginActivity2.class);
+                Intent login = new Intent(RegisterUserActivity.this, LoginActivity.class);
                 startActivity(login);
             }
         });
@@ -96,7 +93,7 @@ public class UserRegisterActivity2 extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
                 auth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(UserRegisterActivity2.this, new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(RegisterUserActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
@@ -115,7 +112,7 @@ public class UserRegisterActivity2 extends AppCompatActivity {
 
 
                                     // Intent i = new Intent(Page_firebase_register_4.this, LoginActivity.class);
-                                    Intent i = new Intent(UserRegisterActivity2.this, LoginActivity2.class);
+                                    Intent i = new Intent(RegisterUserActivity.this, LoginActivity.class);
                                     startActivity(i);
                                     finish();
                                 } else {

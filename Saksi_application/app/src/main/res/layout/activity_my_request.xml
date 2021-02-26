@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".request.MyRequest">
+
+   <TextView
+       android:id="@+id/head"
+       android:layout_width="match_parent"
+       android:layout_marginTop="-20dp"
+       android:paddingTop="20dp"
+       android:layout_height="100dp"
+       android:fontFamily="@font/fc_friday_medium"
+       android:text="คำขอของฉัน"
+       android:textColor="#fff"
+       android:gravity="center"
+       android:textSize="20dp"
+       android:background="@drawable/button_round_b"/>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recViewMyRequest"
+       android:layout_below="@+id/head"
+       android:layout_marginTop="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       />
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.chutikarn.saksi_application.Result;
+package com.chutikarn.saksi_application.result;
 
 import android.content.Intent;
 import android.os.Bundle;

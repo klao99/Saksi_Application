@@ -5,29 +5,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="30dp"
-    tools:context=".Store.StoreProfileActivity2">
+    tools:context=".store.StoreProfileActivity2">
 
-    <com.mikhaellopez.circularimageview.CircularImageView
-        android:id="@+id/imgPro"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/profil_inception"
-        />
 
-    <TextView
-        android:id="@+id/textNameProfile"
-        android:layout_toRightOf="@+id/imgPro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:text="ชื่อAdmin"
-        android:textSize="20dp"/>
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="150dp"/>
+
+    <RelativeLayout
+        android:id="@+id/box1"
+        android:layout_below="@+id/banner"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imgPro"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher_round"
+            />
+
+        <TextView
+            android:id="@+id/nameStore"
+            android:layout_toRightOf="@+id/imgPro"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:fontFamily="@font/fc_friday_medium"
+            android:layout_marginLeft="15dp"
+            android:textSize="23dp"
+            android:text="NameStore"
+            />
+        <TextView
+            android:id="@+id/reView"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/location"
+            android:layout_below="@+id/nameStore"
+            android:layout_toRightOf="@+id/imgPro"
+            android:layout_marginLeft="15dp"
+            android:text="ตำแหน่งที่ตั้ง"
+            android:textSize="15dp"
+            android:textColor="#C4C4C4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/headDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="รายละเอียด"
+            android:textColor="#000"
+            android:layout_below="@+id/imgPro"/>
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headDetail"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="รายละเอียด"
+            android:textSize="10dp"
+            android:textStyle="normal"
+            android:textAlignment="textStart"/>
+
+        //////////////////
+    </RelativeLayout>
+
 
     <Button
         android:id="@+id/btnLogout"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ออกจากระบบ"/>

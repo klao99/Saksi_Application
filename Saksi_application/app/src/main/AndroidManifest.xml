@@ -13,17 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".slide.SlideStoreActivity"></activity>
+        <activity android:name=".request.BillRequestActivity"></activity>
+        <activity android:name=".request.MyRequest" />
+        <activity android:name=".slide.SlideStoreActivity" />
         <activity android:name=".slide.SlideTattooActivity" />
-        <activity android:name=".RequestActivity" />
-        <activity android:name=".Store.StoreProfileActivity2" /> <!-- <activity android:name=".login.RegisterActivity"> -->
-        <activity android:name=".LoginRegis.LoginActivity2" />
-        <activity android:name=".LoginRegis.UserRegisterActivity2" />
-        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".request.RequestActivity" />
+        <activity android:name=".loginRegis.RegisterStoreActivity" />
+        <activity android:name=".store.StoreProfileActivity2" />
+        <activity android:name=".loginRegis.LoginActivity" />
+        <activity android:name=".loginRegis.RegisterUserActivity" />
         <activity android:name=".UserProfileActivity" />
-        <activity android:name=".Result.ResultStoreListActivity" />
-        <activity android:name=".CategoryListActivity" />
-        <activity android:name=".Store.StoreProfileActivity" />
+        <activity android:name=".result.ResultStoreListActivity" />
+        <activity android:name=".CategoryTattooListActivity" />
+        <activity android:name=".store.StoreProfileActivity" />
         <activity android:name=".ViewActivity2" />
         <activity android:name=".TestTattooActivity" />
         <activity android:name=".ViewActivity" />
@@ -34,7 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Result.ResultTattooListActivity" />
+        <activity android:name=".result.ResultTattooListActivity" />
         <activity android:name=".bottomNev.ProfileActivity" />
         <activity android:name=".bottomNev.StoreActivity" />
         <activity android:name=".MainActivity" />

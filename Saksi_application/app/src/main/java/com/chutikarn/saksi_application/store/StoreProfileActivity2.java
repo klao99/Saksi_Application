@@ -1,21 +1,17 @@
-package com.chutikarn.saksi_application.bottomNev;
+package com.chutikarn.saksi_application.store;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.chutikarn.saksi_application.loginRegis.LoginActivity;
-import com.chutikarn.saksi_application.request.MyRequest;
 import com.chutikarn.saksi_application.R;
 import com.chutikarn.saksi_application.model.Users;
-import com.chutikarn.saksi_application.slide.SlideStoreActivity;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -25,46 +21,32 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-public class ProfileActivity extends AppCompatActivity {
+public class StoreProfileActivity2 extends AppCompatActivity {
 
     FirebaseAuth firebaseAuth;
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
     FirebaseUser firebaseUser;
 
-    TextView btnLogout;
-
     String profile,userID;
-    String name;
+    String nameStore;
 
     ImageView imgPro;
-    TextView textNameProfile,btnNoti;
+    TextView textNameStore;
+
+    Button btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_page);
-
-        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        setContentView(R.layout.activity_store_profile2);
 
 
         btnLogout = findViewById(R.id.btnLogout);
-        textNameProfile = findViewById(R.id.textNameProfile);
+        textNameStore = findViewById(R.id.nameStore);
         imgPro = findViewById(R.id.imgPro);
-        btnNoti = findViewById(R.id.btnNoti);
 
-        btnNoti.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-               // FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-
-                Intent intent=new Intent(ProfileActivity.this, MyRequest.class);
-                userID = firebaseUser.getUid();
-                startActivity(intent);
-            }
-        });
-
+        DecsProfile();
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,35 +56,9 @@ public class ProfileActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
 
-
-        //BottomNav
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        bottomNavigationView.setSelectedItemId(R.id.profile);
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
-                    case R.id.home:
-                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                    case R.id.store:
-                        startActivity(new Intent(getApplicationContext(), SlideStoreActivity.class));
-                        overridePendingTransition(0,0);
-                        return true;
-
-                    case R.id.profile:
-                        return true;
-                }
-                return false;
-            }
-
-
-        });
+    private void DecsProfile() {
 
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -124,19 +80,18 @@ public class ProfileActivity extends AppCompatActivity {
             });
 
         }else {
-            startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
+            startActivity(new Intent(StoreProfileActivity2.this, LoginActivity.class));
             finish();
         }
 
-
-
-    }//onCReate
+    }
 
     private  void showData(DataSnapshot snapshot) {
 
         Users uInfo = snapshot.getValue(Users.class);
-        textNameProfile.setText(uInfo.getName());
+        textNameStore.setText(uInfo.getName());
         Picasso.get().load(uInfo.getProfile()).into(imgPro);
 
     }
-}//Appcompat
+
+}

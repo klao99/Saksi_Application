@@ -32,9 +32,13 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView recView;
     FirebaseRecyclerOptions<tattooPic>options;
     FirebaseRecyclerAdapter<tattooPic, MyViewHolder>adapter;
-    DatabaseReference dataRef;
+    DatabaseReference dataRef,dataRef2;
 
     ImageView btnTesttat;
+
+    String storeProfile,storeName;
+
+
 
 
 
@@ -48,8 +52,12 @@ public class HomeActivity extends AppCompatActivity {
         recView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
         recView.setHasFixedSize(true);
 
+        storeProfile = getIntent().getStringExtra("storeProfile");
+        storeName = getIntent().getStringExtra("storeName");
+
 
         dataRef = FirebaseDatabase.getInstance().getReference().child("tattooPic");
+        dataRef2 = FirebaseDatabase.getInstance().getReference().child("Stores");
 
         btnTesttat=findViewById(R.id.btnTesttat);
 
@@ -102,6 +110,11 @@ public class HomeActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent intent=new Intent(HomeActivity.this, ViewActivity.class);
                         intent.putExtra("pickey",getRef(position).getKey());
+
+                        ///
+
+//                        intent.putExtra("storeProfile",storeProfile);
+//                        intent.putExtra("storeName",storeName);
                         startActivity(intent);
                     }
                 });

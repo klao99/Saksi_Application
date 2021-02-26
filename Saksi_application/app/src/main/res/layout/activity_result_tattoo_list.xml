@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
@@ -20,8 +20,9 @@
         android:layout_below="@+id/logo"
         android:textColor="#000"
         android:text="ประเภท"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:fontFamily="@font/fc_friday_medium"
+        android:layout_marginBottom="20dp"
+        android:textSize="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -31,7 +32,7 @@
                 android:layout_below="@+id/textType"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
 
 </RelativeLayout>

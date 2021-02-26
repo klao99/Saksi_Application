@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chutikarn.saksi_application.R;
-import com.chutikarn.saksi_application.Result.ResultStoreListActivity;
+import com.chutikarn.saksi_application.result.ResultStoreListActivity;
 import com.chutikarn.saksi_application.firebase.FirebaseManager;
 import com.chutikarn.saksi_application.model.Category;
 import com.chutikarn.saksi_application.CategoryStoreListActivity;

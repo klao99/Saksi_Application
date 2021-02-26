@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#181818"
-    tools:context=".login.RegisterActivity">
+    android:background="#1F242A"
+    tools:context=".loginRegis.RegisterStoreActivity">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
-            android:text="สมัครสมาชิก"
+            android:text="สมัครเป็นร้านค้า"
             android:fontFamily="@font/mitr_regular"
             android:textColor="#fff"
             android:textSize="20dp"/>
@@ -111,9 +111,10 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="50dp"
-            android:background="@drawable/button_round_y"
+            android:background="@drawable/button_round"
             android:fontFamily="@font/mitr_regular"
-            android:text="ไปหน้าLog in"
+            android:textColor="#F9A826"
+            android:text="กลับหน้า Log in"
             android:textSize="14dp" />
 
         <Button
@@ -124,7 +125,7 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/button_round_y"
             android:fontFamily="@font/mitr_regular"
-            android:text="สร้างAccount"
+            android:text="สมัครสมาชิก"
             android:textSize="14dp" />
 
     </RelativeLayout>

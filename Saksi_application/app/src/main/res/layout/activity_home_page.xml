@@ -26,8 +26,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ทดลองลายสัก"
+            android:fontFamily="@font/fc_friday_medium"
             android:textColor="#000"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:layout_marginTop="155dp"
             android:layout_marginLeft="25dp"
             android:layout_alignLeft="@+id/btnTesttat"/>
@@ -46,8 +47,9 @@
             android:layout_below="@+id/btnTesttat"
             android:text="ประเภทที่นิยม"
             android:layout_marginLeft="30dp"
+            android:fontFamily="@font/fc_friday_medium"
             android:textColor="#000"
-            android:textSize="25dp"
+            android:textSize="30dp"
             android:layout_marginTop="40dp"
             />
 

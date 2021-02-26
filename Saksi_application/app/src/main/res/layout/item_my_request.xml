@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#1F242A"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/headPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ตำแหน่งที่ต้องการสัก"
+                android:textColor="#C4C4C4" />
+
+
+            <TextView
+                android:id="@+id/position"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ตำแหน่งที่ต้องการสัก"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/headSize"
+                android:layout_below="@+id/headPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ขนาด"
+                android:textColor="#C4C4C4" />
+            <TextView
+                android:id="@+id/size"
+                android:layout_below="@+id/position"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ขนาด"
+                android:textColor="#fff" />
+            <TextView
+                android:id="@+id/headColor"
+                android:layout_below="@+id/headSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="สีที่ต้องการ"
+                android:textColor="#C4C4C4" />
+            <TextView
+                android:id="@+id/color"
+                android:layout_below="@+id/size"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="สี"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/headDetail"
+                android:layout_below="@+id/headColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="รายละเอียด"
+                android:textColor="#C4C4C4" />
+            <TextView
+                android:id="@+id/detail"
+                android:layout_below="@+id/color"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="รายละเอียด"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/headDate"
+                android:layout_below="@+id/headDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="วันเวลาที่ต้องการ"
+                android:textColor="#C4C4C4" />
+
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_below="@+id/detail"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="วัน"
+                android:textColor="#fff" />
+            <TextView
+                android:id="@+id/headImgTattoo"
+                android:layout_below="@+id/headDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="รูปที่ต้องการให้สัก"
+                android:layout_marginBottom="20dp"
+                android:textColor="#C4C4C4" />
+
+            <ImageView
+                android:id="@+id/imgtattoo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:layout_below="@+id/headImgTattoo"/>
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

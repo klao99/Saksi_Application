@@ -1,4 +1,4 @@
-package com.chutikarn.saksi_application.LoginRegis;
+package com.chutikarn.saksi_application.loginRegis;
 
 
 import android.content.Intent;
@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.chutikarn.saksi_application.R;
 import com.chutikarn.saksi_application.bottomNev.ProfileActivity;
+import com.chutikarn.saksi_application.store.StoreProfileActivity2;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -27,24 +28,25 @@ import com.google.firebase.database.FirebaseDatabase;
 
 
 @SuppressWarnings("ALL")
-public class LoginActivity2 extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
     private DatabaseReference databaseReference;
     private ProgressBar progressBar;
-    private Button btnLogin,btnSignup;
+    private Button btnLogin,btnSignup,btn_regisStore;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login2);
+        setContentView(R.layout.activity_login);
 
         inputEmail = (EditText) findViewById(R.id.input_email);
         inputPassword = (EditText) findViewById(R.id.input_password);
         btnSignup = (Button) findViewById(R.id.btn_signup);
         btnLogin = (Button) findViewById(R.id.btn_login);
+        btn_regisStore = (Button) findViewById(R.id.btn_regisStore);
 
 
         // progressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -54,10 +56,10 @@ public class LoginActivity2 extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = inputEmail.getText().toString();
+                 String email = inputEmail.getText().toString();
                 final String password = inputPassword.getText().toString();
-
-
+//                final String admin = "isAdmin";
+//                final String user = "isUser";
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "กรุณากรอกอีเมล", Toast.LENGTH_SHORT).show();
@@ -69,26 +71,34 @@ public class LoginActivity2 extends AppCompatActivity {
                     return;
                 }
 
+
                 //progressBar.setVisibility(View.VISIBLE);
 
                 //authenticate user
                 auth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(LoginActivity2.this, new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
-                                //progressBar.setVisibility(View.GONE);
-
-                                if (!task.isSuccessful()) {
+                                if (task.isSuccessful()) {
                                     // there was an error
-                                    Toast.makeText(LoginActivity2.this, "Log in Not Successfully", Toast.LENGTH_LONG).show();
-                                } else {
                                     DatabaseReference DatabaseRefe = FirebaseDatabase.getInstance().getReference().child("Users");
                                     databaseReference = DatabaseRefe.child(auth.getCurrentUser().getUid());
                                     databaseReference.child("password").setValue(password);
-                                    Intent intent = new Intent(LoginActivity2.this, ProfileActivity.class);
-                                    startActivity(intent);
-                                    finish();
+
+                                    if (databaseReference.child("userType").equals("isStore")){
+                                        Intent intent = new Intent(LoginActivity.this, StoreProfileActivity2.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }else if (databaseReference.child("userType").equals("isStore")){
+                                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+
+                                } else {
+                                    Toast.makeText(LoginActivity.this, "Log in Not Successfully", Toast.LENGTH_LONG).show();
+
                                 }
                             }
                         });
@@ -98,14 +108,27 @@ public class LoginActivity2 extends AppCompatActivity {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity2.this, UserRegisterActivity2.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterUserActivity.class);
                 startActivity(intent);
 
             }
         });
 
+        btn_regisStore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterStoreActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }//onCreate
+
+
+
+
+
 
 
 

@@ -1,13 +1,13 @@
 package com.chutikarn.saksi_application;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.chutikarn.saksi_application.firebase.FirebaseCallbacks;
 import com.chutikarn.saksi_application.firebase.FirebaseManager;
@@ -16,10 +16,13 @@ import com.squareup.picasso.Picasso;
 
 public class ViewActivity extends AppCompatActivity {
 
-    private ImageView imgtattooholder;
-    TextView detailholder;
+    private ImageView imgtattooholder,imgPro;
+    TextView detailholder,storeNameholder;
     Button btnTest;
     String ImageUrl;
+
+    String storeName,storeProfile;
+
     private FirebaseManager firebaseManager;
 
     @Override
@@ -30,13 +33,21 @@ public class ViewActivity extends AppCompatActivity {
         imgtattooholder = findViewById(R.id.imgtattooholder);
         detailholder = findViewById(R.id.detailholder);
         btnTest = findViewById(R.id.btnTest);
+        imgPro =findViewById(R.id.imgPro);
+        storeNameholder = findViewById(R.id.storeNameholder);
+
+//        storeName = getIntent().getStringExtra("storeName");
+//        storeProfile = getIntent().getStringExtra("storeProfile");
+
+//        storeNameholder.setText("" + storeName);
+//        Picasso.get().load("" + storeProfile).into(imgPro);
 
         firebaseManager = new FirebaseManager();
         getFirebaseData();
         initControl();
 
 
-    }
+    }//onCreate
 
 
 

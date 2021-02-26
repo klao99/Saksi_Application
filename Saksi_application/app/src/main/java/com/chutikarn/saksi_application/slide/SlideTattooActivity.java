@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.chutikarn.saksi_application.Adapter.SlideTattooAdapter;
-import com.chutikarn.saksi_application.CategoryListActivity;
+import com.chutikarn.saksi_application.CategoryTattooListActivity;
 import com.chutikarn.saksi_application.R;
 
 public class SlideTattooActivity extends AppCompatActivity {
@@ -49,7 +49,7 @@ public class SlideTattooActivity extends AppCompatActivity {
         btnPassIntro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SlideTattooActivity.this, CategoryListActivity.class);
+                Intent intent=new Intent(SlideTattooActivity.this, CategoryTattooListActivity.class);
                 startActivity(intent);
             }
         });
@@ -58,7 +58,7 @@ public class SlideTattooActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (mCurrentPage == 3 ){
-                    Intent intent=new Intent(SlideTattooActivity.this, CategoryListActivity.class);
+                    Intent intent=new Intent(SlideTattooActivity.this, CategoryTattooListActivity.class);
                     startActivity(intent);
                 }else {
                     mSlideView.setCurrentItem(mCurrentPage + 1);

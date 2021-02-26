@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+            <ImageView
+                android:id="@+id/imgAlert"
+                android:layout_below="@+id/headAlert"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/forgotpass" />
+            <TextView
+                android:id="@+id/headAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="ไม่ได้เข้าสู้ระบบ"
+                android:fontFamily="@font/fc_friday_medium"
+                android:textColor="#EE6464"
+                android:textSize="30dp"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/textAlert"
+                android:layout_below="@+id/imgAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textColor="#293038"
+                android:text="คุณยังไม่ได้เข้าสู่ระบบ จึงไม่สามารถส่งคำร้องได้"/>
+
+            <TextView
+                android:id="@+id/btnClose"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_close"/>
+
+
+            <Button
+                android:id="@+id/btngoToLogin"
+                android:layout_below="@id/textAlert"
+                android:layout_width="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_round_y"
+                android:fontFamily="@font/mitr_regular"
+                android:text="ไปหน้าเข้าสู่ระบบ"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+</androidx.cardview.widget.CardView>

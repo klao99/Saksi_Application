@@ -1,4 +1,4 @@
-package com.chutikarn.saksi_application.Result;
+package com.chutikarn.saksi_application.result;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chutikarn.saksi_application.R;
-import com.chutikarn.saksi_application.Store.StoreProfileActivity;
+import com.chutikarn.saksi_application.store.StoreProfileActivity;
 import com.chutikarn.saksi_application.model.Stores;
 import com.chutikarn.saksi_application.viewHolder.ResultStoreViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;

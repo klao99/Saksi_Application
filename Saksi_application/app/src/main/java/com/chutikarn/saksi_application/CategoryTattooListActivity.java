@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.chutikarn.saksi_application.Result.ResultTattooListActivity;
+import com.chutikarn.saksi_application.result.ResultTattooListActivity;
 import com.chutikarn.saksi_application.firebase.FirebaseManager;
 import com.chutikarn.saksi_application.model.Category;
 import com.chutikarn.saksi_application.viewHolder.CategoryViewHolder;
@@ -22,7 +22,7 @@ import com.google.firebase.database.Query;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
-public class CategoryListActivity extends AppCompatActivity {
+public class CategoryTattooListActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     Query databaseReference;
@@ -57,7 +57,7 @@ public class CategoryListActivity extends AppCompatActivity {
                     holder.itemView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent=new Intent(CategoryListActivity.this, ResultTattooListActivity.class);
+                            Intent intent=new Intent(CategoryTattooListActivity.this, ResultTattooListActivity.class);
                             intent.putExtra("catId", model.getCatTitle());
                             intent.putExtra("catTitle", model.getCatTitle());
                             startActivity(intent);
@@ -87,7 +87,7 @@ public class CategoryListActivity extends AppCompatActivity {
             GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(), 3);
             recyclerView.setLayoutManager(gridLayoutManager);
             recyclerView.setAdapter(adapter);
-    }
+    } //onCreate
 
 
 
